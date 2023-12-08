@@ -1,0 +1,177 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.action-button {
+    font-size: 20px;
+    color: #6BAA75;
+    padding: 10px;
+    background-color: #fbfbf3;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #f9d2b2;
+  border-color: #333;
+  color: #333;
+}
+
+#post-activity-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    font-size: 36px;
+    background-color: #f67811;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#post-activity-button:hover,
+#post-activity-button:focus {
+  right: 27px;
+  bottom: 27px;
+  height: 66px;
+  width: 66px;
+  border-radius: 33px;
+  font-size: 40px;
+}
+
+#post-activity-button:focus {
+  outline: none;
+}
+
+#modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+  
+#post-activity-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+}
+  
+/* .hidden {
+    display: none;
+} */
+
+.modal-dialog {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 30px;
+    background-color: #fbfbf3;
+
+}
+  
+.modal-header {
+    position: relative;
+    padding: 10px 20px;
+    padding-top: 30px;
+}
+  
+.modal-header h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin: 0;
+    font-size: 28px;
+    color: #6BAA75;
+}
+
+#modal-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.modal-body {
+    padding: 20px;
+    background-color: #fbfbf3;
+}
+
+.activity-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: lighter;
+}
+  
+.activity-input-element > label {
+    
+    flex: 1 75px;
+    margin-right: 10px;
+    color: #6BAA75;
+
+}
+
+.activity-input-element > #activity-distance-fieldset {
+    color: #6BAA75;
+}
+
+.activity-input-element > #activity-type-fieldset {
+    color: #6BAA75;
+}
+
+  
+.activity-input-element input {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fbfbf3;
+    
+}
+  
+.activity-fieldset {
+    flex: 1 100%;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+}
+  
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 20px 10px;
+}
+  
+#modal-cancel,
+#modal-accept {
+    margin-right: 20px;
+}
+  
+#modal-cancel {
+    color: #6BAA75;
+    background-color:#fbfbf3;
+}
+  
+#modal-cancel:hover {
+    background-color: #eee;
+}

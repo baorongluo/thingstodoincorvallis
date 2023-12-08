@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+  
+
+  <main class="content">
+
+    <aside class="filter-container">
+
+      <h2>Search for Things to Do</h2>
+
+      <div class="filter-input-container">
+        <label for="filter-text" class="filter-input-label">By Title</label>
+        <div class="filter-input-element">
+          <input type="text" name="filter-text" id="filter-text" class="filter-input">
+        </div>
+      </div>
+
+      <div class="filter-input-container">
+        <label for="distance" class="filter-input-label">By Distance</label>
+        <div class="filter-input-element">
+          <select id="filter-distance" class="filter-input" name="filter-distance">
+            <option selected value="">Any</option>
+            <option>On Campus</option>
+            <option>Walkable from Campus</option>
+            <option>In Corvallis</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-input-container">
+        <fieldset id="filter-type" class="filter-fieldset">
+          <legend>By Type of Activity</legend>
+          <div>
+            <input type="checkbox" name="filter-type" id="filter-type-Self-Care" value="Self-Care">
+            <label for="filter-type-Self-Care">Self Care</label>
+          </div>
+          <div>
+            <input type="checkbox" name="filter-type" id="filter-type-Recurring-Event" value="Recurring-Event">
+            <label for="filter-type-Recurring-Event">Recurring Event</label>
+          </div>
+          <div>
+            <input type="checkbox" name="filter-type" id="filter-type-own-time" value="own-time">
+            <label for="filter-type-own-time">On Your Own Time</label>
+          </div>
+          <div>
+            <input type="checkbox" name="filter-type" id="filter-type-Outdoor" value="Outdoor">
+            <label for="filter-type-Outdoor">Outdoor</label>
+          </div>
+          <div>
+            <input type="checkbox" name="filter-type" id="filter-type-free" value="free">
+            <label for="filter-type-free">Free</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <button id="filter-update-button" class="action-button">Update</button>
+
+    </aside>
+
+
+    <!-- This section will be to display activity posts, which will be shared throughout site -->
+    <!-- We may use something like document.querySelectorAll('.xyz') or document.getElementsByClassName('xyz') -->
+
+    <section id="activity-posts">
+      <!-- IGNORE THIS FOR NOW AHHHHHHHHHHHHHH -->
+      <aside class="preview-container">
+
+        <div class="slides-div" id="on-campus-preview">
+          <h3 class="carousel-label">On Campus</h3>
+          <div class="slides" id="on-campus-posts">
+            <div class="slide">
+              <h3>1</h3>
+            </div>
+            <div class="slide">
+              <h3>2</h3>
+            </div>
+            <div class="slide">
+              <h3>3</h3>
+            </div>
+            <div class="slide">
+              <h3>4</h3>
+            </div>
+            <div class="slide">
+              <h3>5</h3>
+            </div>
+            <div class="slide">
+              <h3>6</h3>
+            </div>
+            <div class="slide">
+              <h3>7</h3>
+            </div>
+            <div class="slide">
+              <h3>8</h3>
+            </div>
+          </div>
+            <button id="filter-on-campus-button" class="preview-action-button">Discover More</button>
+          </div>
+
+
+          <div class="slides-div" id="walkable-preview">
+            <h3 class="carousel-label">Walkable From Campus</h3>
+            <div class="slides" id="walkable-posts">
+              <div class="slide">
+                <h3>1</h3>
+              </div>
+              <div class="slide">
+                <h3>2</h3>
+              </div>
+              <div class="slide">
+                <h3>3</h3>
+              </div>
+              <div class="slide">
+                <h3>4</h3>
+              </div>
+              <div class="slide">
+                <h3>5</h3>
+              </div>
+              <div class="slide">
+                <h3>6</h3>
+              </div>
+              <div class="slide">
+                <h3>7</h3>
+              </div>
+              <div class="slide">
+                <h3>8</h3>
+              </div>
+            </div>
+            <button id="filter-walkable-button" class="preview-action-button">Discover More</button>
+          </div>
+      </aside>
+
+        <!-- IGNORE THIS FOR NOW AHHHHHHHHHHHHHH -->
+
+
+
+      <div id="toolbar">
+        <button class="toolbarbutton" id="resetfilter">Reset Filters</button>
+        <button class="toolbarbutton" id="line">|</button>
+        <button class="toolbarbutton" id="filtertoggle">Filters</button>
+      </div>
+
+    
+
+      <section id="posts">
+       
+
+        {{#each posts}}
+            {{> post}}
+        {{/each}}
+  
+      </section>
+
+    
+
+    </section>
+  </main>
+
+  <button type="button" id="post-activity-button"><i class="fas fa-plus"></i></button>
+
+  <div id="modal-backdrop" class="hidden"></div>
+  <div id="post-activity-modal" class="hidden">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <h3>Post a fun activity in Corvallis</h3>
+        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="activity-input-element">
+          <label for="activity-text-input">Activity description</label>
+          <input type="text" id="activity-text-input"></input>
+        </div>
+
+        <div class="activity-input-element">
+          <label for="activity-detail-input">Activity details</label>
+          <input type="text" id="activity-detail-input"></input>
+        </div>
+
+
+        <div class="activity-input-element">
+          <fieldset id="activity-distance-fieldset" class="activity-fieldset">
+            <legend>Distance From OSU</legend>
+            <div>
+              <input type="radio" name="activity-distance" id="activity-distance-on-campus" value="on-campus" checked>
+              <label for="activity-distance-on-campus">On Campus</label>
+            </div>
+
+            <div>
+              <input type="radio" name="activity-distance" id="activity-distance-walkable" value="walkable-from-campus">
+              <label for="activity-distance-walkable">Walkable From Campus </label>
+            </div>
+
+            <div>
+              <input type="radio" name="activity-distance" id="activity-distance-in-corvallis" value="in-corvallis">
+              <label for="activity-distance-in-corvallis">In Corvallis</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="activity-input-element">
+          <fieldset id="activity-type-fieldset" class="activity-fieldset">
+            <legend>Activity Type</legend>
+            <div>
+              <input type="checkbox" name="activity-type" id="activity-free-event" value="free-event">
+              <label for="activity-free-event">Free Event</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="activity-type" id="activity-self-care" value="self-care">
+              <label for="activity-self-care">Self Care</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="activity-type" id="activity-recurring-event" value="recurring-event">
+              <label for="activity-recurring-event">Recurring Event</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="activity-type" id="activity-your-own-time" value="your-own-time">
+              <label for="activity-your-own-time">Do It At Your Own Time</label>
+            </div>
+
+
+          </fieldset>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+        <button type="button" id="modal-accept" class="action-button">Post Activity</button>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!--<script type="text/javascript" src="https://web.engr.oregonstate.edu/~jinjo/final/slick-1.8.1/slick/slick.min.js"></script>-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>

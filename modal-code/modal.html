@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Modal HTML</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <main>
+            <button type="button" id="post-activity-button"><i class="fas fa-plus"></i></button>
+
+            <div id="modal-backdrop" class="hidden"></div>
+            <div id="post-activity-modal" class="hidden">
+                <div class="modal-dialog">
+
+                    <div class="modal-header">
+                        <h3>Post a fun activity in Corvallis</h3> 
+                        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>                  
+                    </div>
+
+                    <div class="modal-body">
+                    
+                    <div class="activity-input-element">
+                        <label for="activity-text-input">Activity description</label>
+                        <input type="text" id="activity-text-input"></input>
+                    </div>
+
+                    <div class="activity-input-element">
+                        <fieldset id="activity-distance-fieldset" class="activity-fieldset">
+                            <legend>Distance From OSU</legend>
+                            <div>
+                                <input type="radio" name="activity-distance" id="activity-distance-on-campus" value="on-campus" checked>
+                                <label for="activity-distance-on-campus">On Campus</label>          
+                            </div>
+
+                            <div>
+                                <input type="radio" name="activity-distance" id="activity-distance-walkable" value="walkable-from-campus">
+                                <label for="activity-distance-walkable">Walkable From Campus </label>          
+                            </div>
+
+                            <div>
+                                <input type="radio" name="activity-distance" id="activity-distance-in-corvallis" value="in-corvallis">
+                                <label for="activity-distance-in-corvallis">In Corvallis</label>          
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <div class="activity-input-element">
+                        <fieldset id="activity-type-fieldset" class="activity-fieldset">
+                            <legend>Activity Type</legend>
+                            <div>
+                                <input type="checkbox" name="activity-type" id="activity-free-event" value="free-event">
+                                <label for="activity-free-event">Free Event</label>          
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="activity-type" id="activity-self-care" value="self-care">
+                                <label for="activity-self-care">Self Care</label>          
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="activity-type" id="activity-recurring-event" value="recurring-event">
+                                <label for="activity-recurring-event">Recurring Event</label>          
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="activity-type" id="activity-your-own-time" value="your-own-time">
+                                <label for="activity-your-own-time">Do It At Your Own Time</label>          
+                            </div>
+            
+
+                        </fieldset>
+                    </div>
+                    
+
+                    <div class="activity-input-element">
+                        <label for="activity-detail-input">More activity details</label>
+                        <input type="text" id="activity-detail-input"></input>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+                        <button type="button" id="modal-accept" class="action-button">Post Activity</button>
+                    </div>
+
+
+                </div>
+ 
+            </div>
+        </main>
+    </body>
+
+
+</html>

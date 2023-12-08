@@ -1,0 +1,61 @@
+{
+    "posts":[
+        {
+            "title": "The Yelling Circle",
+            "distance": "On Campus",
+            "type": ["On Your Own Time, Outdoor, Free"],
+            "details": "On the west side of Gilkey Hall, you can find a 'yelling circle'. Stand in the middle, say something, and hear yourself echo back. You can find this yelling circle via the following Google Maps link: https://maps.app.goo.gl/m7vnGFcnreRaLb5X9"
+        },
+
+        {
+            "title": "Lanes & Games at the Memorial Union",
+            "distance": "On Campus",
+            "type": ["Recurring Event"],
+            "details": "Round up a group of friends to check out the bowling, billards, and arcade in the southwest corner of the MU, below the food court. For fun on a budget, I recomend billards! Information about hours and pricing can be found on the following website: https://mu.oregonstate.edu/lanesgames."
+        },
+
+        {
+            "title": "Fitton Green",
+            "distance": "In Corvallis",
+            "type": ["On Your Own Time, Outdoor, Free"],
+            "details": "Enjoy 308 acres of grassy slopes, trees, and hills on the horizon. You can drive almost all the way up to a stunning view. This spot is popular for families taking photos, couples having picnic dates, and people hiking with their dogs. During the warm and dry part of Oregon's year, you may see groups of students at sunset, walking around in fuzzy blankets and taking in the view. "
+        },
+
+        {
+            "title": "Lay in the Grass",
+            "distance": "On Campus",
+            "type": ["On Your Own Time, Outdoor, Self Care, Free"],
+            "details": "Our campus has some delightful spots to lay out a picnic blanket and enjoy some quiet time unplugged from devices. (So long as the weather permits) McNary Field seems to be a popular spot for laying in the sun or reading a book."
+        },
+
+        {
+            "title": "Take a Nap",
+            "distance": "On Campus",
+            "type": ["On Your Own Time, Self Care, Free"],
+            "details": "Cozy up. Napping is a popular activity during Oregon's rainy season. Allow your body some time to rest and digest."
+        },
+
+        {
+            "title": "At Home Facial",
+            "distance": "On Campus",
+            "type": ["Self Care, On Your Own Time"],
+            "details": "Wash your face and treat your skin to your facial of choice. Perhaps a hydrating sheet mask during the cold season to balance out the dry air, or a vitamin C mask during the summer to protect against sun damage."
+        },
+
+        {
+            "title": "The Farmers Market",
+            "distance": "Walkable from Campus, Outdoor",
+            "type": ["Recurring Event"],
+            "details": "Wednesdays and Saturdays from April through November, the farmer's market sets up by the riverfront in downtown Corvallis. Enjoy some hustle and bustle, treat yourself to fresh baked goods, try a new food truck, or take home some locally grown produce. Enjoy the event for free if you don't buy anything! :)"
+        },
+
+        {
+            "title": "Happy Hour Grub",
+            "distance": "Walkable from Campus",
+            "type": ["Recurring Event"],
+            "details": "Get a great deal on great food during happy hour at a local restaurant. We have two noteworthy suggestions for you. Try Bo & Vine in downtown Corvallis, for $6.50 burgers and $3 fries (including sweet potato fries!) during their social hour special which runs Mon-Thurs, from 3-5pm and 8-10pm. In South Corvallis, try 4 Spirits Disillery for $2.50 sliders until 5PM"
+        }
+        
+
+    ]
+}
